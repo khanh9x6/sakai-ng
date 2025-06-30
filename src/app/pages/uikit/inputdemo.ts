@@ -63,17 +63,17 @@ import { Country } from '../service/customer.service';
         InputGroupAddonModule,
         TextareaModule
     ],
-    template: ` <p-fluid class="flex flex-col md:flex-row gap-8">
+    template: ` <p-fluid class="d-flex flex-column d-md-flex-row gap-4">
             <div class="md:w-1/2">
-                <div class="card flex flex-col gap-4">
-                    <div class="font-semibold text-xl">InputText</div>
-                    <div class="flex flex-col md:flex-row gap-4">
+                <div class="card d-flex flex-column g-3">
+                    <div class="fw-semibold fs-4">InputText</div>
+                    <div class="d-flex flex-column d-md-flex-row g-3">
                         <input pInputText type="text" placeholder="Default" />
                         <input pInputText type="text" placeholder="Disabled" [disabled]="true" />
                         <input pInputText type="text" placeholder="Invalid" class="ng-dirty ng-invalid" />
                     </div>
 
-                    <div class="font-semibold text-xl">Icons</div>
+                    <div class="fw-semibold fs-4">Icons</div>
                     <p-iconfield>
                         <p-inputicon class="pi pi-user" />
                         <input pInputText type="text" placeholder="Username" />
@@ -83,126 +83,126 @@ import { Country } from '../service/customer.service';
                         <p-inputicon class="pi pi-search" />
                     </p-iconfield>
 
-                    <div class="font-semibold text-xl">Float Label</div>
+                    <div class="fw-semibold fs-4">Float Label</div>
                     <p-floatlabel>
                         <input pInputText id="username" type="text" [(ngModel)]="floatValue" />
                         <label for="username">Username</label>
                     </p-floatlabel>
 
-                    <div class="font-semibold text-xl">Textarea</div>
+                    <div class="fw-semibold fs-4">Textarea</div>
                     <textarea pTextarea placeholder="Your Message" [autoResize]="true" rows="3" cols="30"></textarea>
 
-                    <div class="font-semibold text-xl">AutoComplete</div>
+                    <div class="fw-semibold fs-4">AutoComplete</div>
                     <p-autocomplete [(ngModel)]="selectedAutoValue" [suggestions]="autoFilteredValue" optionLabel="name" placeholder="Search" dropdown multiple display="chip" (completeMethod)="filterCountry($event)" />
 
-                    <div class="font-semibold text-xl">DatePicker</div>
+                    <div class="fw-semibold fs-4">DatePicker</div>
                     <p-datepicker [showIcon]="true" [showButtonBar]="true" [(ngModel)]="calendarValue"></p-datepicker>
 
-                    <div class="font-semibold text-xl">InputNumber</div>
+                    <div class="fw-semibold fs-4">InputNumber</div>
                     <p-inputnumber [(ngModel)]="inputNumberValue" showButtons mode="decimal"></p-inputnumber>
                 </div>
 
-                <div class="card flex flex-col gap-4">
-                    <div class="font-semibold text-xl">Slider</div>
+                <div class="card d-flex flex-column g-3">
+                    <div class="fw-semibold fs-4">Slider</div>
                     <input pInputText [(ngModel)]="sliderValue" type="number" />
                     <p-slider [(ngModel)]="sliderValue" />
 
-                    <div class="flex flex-row mt-6">
-                        <div class="flex flex-col gap-4 w-1/2">
-                            <div class="font-semibold text-xl">Rating</div>
+                    <div class="d-flex flex-row mt-4">
+                        <div class="d-flex flex-column g-3 w-1/2">
+                            <div class="fw-semibold fs-4">Rating</div>
                             <p-rating [(ngModel)]="ratingValue" />
                         </div>
-                        <div class="flex flex-col gap-4 w-1/2">
-                            <div class="font-semibold text-xl">ColorPicker</div>
+                        <div class="d-flex flex-column g-3 w-1/2">
+                            <div class="fw-semibold fs-4">ColorPicker</div>
                             <p-colorpicker [style]="{ width: '2rem' }" [(ngModel)]="colorValue" />
                         </div>
                     </div>
 
-                    <div class="font-semibold text-xl">Knob</div>
+                    <div class="fw-semibold fs-4">Knob</div>
                     <p-knob [(ngModel)]="knobValue" [step]="10" [min]="-50" [max]="50" valueTemplate="{value}%" />
                 </div>
             </div>
             <div class="md:w-1/2">
-                <div class="card flex flex-col gap-4">
-                    <div class="font-semibold text-xl">RadioButton</div>
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="flex items-center">
+                <div class="card d-flex flex-column g-3">
+                    <div class="fw-semibold fs-4">RadioButton</div>
+                    <div class="d-flex flex-column d-md-flex-row g-3">
+                        <div class="d-flex align-items-center">
                             <p-radiobutton id="option1" name="option" value="Chicago" [(ngModel)]="radioValue" />
-                            <label for="option1" class="leading-none ml-2">Chicago</label>
+                            <label for="option1" class="leading-none ms-2">Chicago</label>
                         </div>
-                        <div class="flex items-center">
+                        <div class="d-flex align-items-center">
                             <p-radiobutton id="option2" name="option" value="Los Angeles" [(ngModel)]="radioValue" />
-                            <label for="option2" class="leading-none ml-2">Los Angeles</label>
+                            <label for="option2" class="leading-none ms-2">Los Angeles</label>
                         </div>
-                        <div class="flex items-center">
+                        <div class="d-flex align-items-center">
                             <p-radiobutton id="option3" name="option" value="New York" [(ngModel)]="radioValue" />
-                            <label for="option3" class="leading-none ml-2">New York</label>
+                            <label for="option3" class="leading-none ms-2">New York</label>
                         </div>
                     </div>
 
-                    <div class="font-semibold text-xl">Checkbox</div>
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="flex items-center">
+                    <div class="fw-semibold fs-4">Checkbox</div>
+                    <div class="d-flex flex-column d-md-flex-row g-3">
+                        <div class="d-flex align-items-center">
                             <p-checkbox id="checkOption1" name="option" value="Chicago" [(ngModel)]="checkboxValue" />
-                            <label for="checkOption1" class="ml-2">Chicago</label>
+                            <label for="checkOption1" class="ms-2">Chicago</label>
                         </div>
-                        <div class="flex items-center">
+                        <div class="d-flex align-items-center">
                             <p-checkbox id="checkOption2" name="option" value="Los Angeles" [(ngModel)]="checkboxValue" />
-                            <label for="checkOption2" class="ml-2">Los Angeles</label>
+                            <label for="checkOption2" class="ms-2">Los Angeles</label>
                         </div>
-                        <div class="flex items-center">
+                        <div class="d-flex align-items-center">
                             <p-checkbox id="checkOption3" name="option" value="New York" [(ngModel)]="checkboxValue" />
-                            <label for="checkOption3" class="ml-2">New York</label>
+                            <label for="checkOption3" class="ms-2">New York</label>
                         </div>
                     </div>
 
-                    <div class="font-semibold text-xl">ToggleSwitch</div>
+                    <div class="fw-semibold fs-4">ToggleSwitch</div>
                     <p-toggleswitch [(ngModel)]="switchValue" />
                 </div>
 
-                <div class="card flex flex-col gap-4">
-                    <div class="font-semibold text-xl">Listbox</div>
+                <div class="card d-flex flex-column g-3">
+                    <div class="fw-semibold fs-4">Listbox</div>
                     <p-listbox [(ngModel)]="listboxValue" [options]="listboxValues" optionLabel="name" [filter]="true" />
 
-                    <div class="font-semibold text-xl">Select</div>
+                    <div class="fw-semibold fs-4">Select</div>
                     <p-select [(ngModel)]="dropdownValue" [options]="dropdownValues" optionLabel="name" placeholder="Select" />
 
-                    <div class="font-semibold text-xl">MultiSelect</div>
+                    <div class="fw-semibold fs-4">MultiSelect</div>
                     <p-multiselect [options]="multiselectCountries" [(ngModel)]="multiselectSelectedCountries" placeholder="Select Countries" optionLabel="name" display="chip" [filter]="true">
                         <ng-template #selecteditems let-countries>
                             @for (country of countries; track country.code) {
-                                <div class="inline-flex items-center py-1 px-2 bg-primary text-primary-contrast rounded-border mr-2">
-                                    <span [class]="'mr-2 flag flag-' + country.code.toLowerCase()" style="width: 18px; height: 12px"></span>
+                                <div class="d-inline-d-flex align-items-center py-1 px-2 bg-primary text-primary-contrast rounded me-2">
+                                    <span [class]="'me-2 flag flag-' + country.code.toLowerCase()" style="width: 18px; height: 12px"></span>
                                     <div>{{ country.name }}</div>
                                 </div>
                             }
                         </ng-template>
                         <ng-template #item let-country>
-                            <div class="flex items-center">
-                                <span [class]="'mr-2 flag flag-' + country.code.toLowerCase()" style="width: 18px; height: 12px"></span>
+                            <div class="d-flex align-items-center">
+                                <span [class]="'me-2 flag flag-' + country.code.toLowerCase()" style="width: 18px; height: 12px"></span>
                                 <div>{{ country.name }}</div>
                             </div>
                         </ng-template>
                     </p-multiselect>
 
-                    <div class="font-semibold text-xl">TreeSelect</div>
+                    <div class="fw-semibold fs-4">TreeSelect</div>
                     <p-treeselect [(ngModel)]="selectedNode" [options]="treeSelectNodes" placeholder="Select Item"></p-treeselect>
                 </div>
 
-                <div class="card flex flex-col gap-4">
-                    <div class="font-semibold text-xl">ToggleButton</div>
+                <div class="card d-flex flex-column g-3">
+                    <div class="fw-semibold fs-4">ToggleButton</div>
                     <p-togglebutton [(ngModel)]="toggleValue" onLabel="Yes" offLabel="No" [style]="{ width: '10em' }" />
 
-                    <div class="font-semibold text-xl">SelectButton</div>
+                    <div class="fw-semibold fs-4">SelectButton</div>
                     <p-selectbutton [(ngModel)]="selectButtonValue" [options]="selectButtonValues" optionLabel="name" />
                 </div>
             </div>
         </p-fluid>
 
-        <p-fluid class="flex mt-8">
-            <div class="card flex flex-col gap-6 w-full">
-                <div class="font-semibold text-xl">InputGroup</div>
-                <div class="flex flex-col md:flex-row gap-6">
+        <p-fluid class="d-flex mt-5">
+            <div class="card d-flex flex-column gap-6 w-100">
+                <div class="fw-semibold fs-4">InputGroup</div>
+                <div class="d-flex flex-column d-md-flex-row gap-6">
                     <p-inputgroup>
                         <p-inputgroup-addon>
                             <i class="pi pi-user"></i>
@@ -221,7 +221,7 @@ import { Country } from '../service/customer.service';
                         <p-inputgroup-addon>.00</p-inputgroup-addon>
                     </p-inputgroup>
                 </div>
-                <div class="flex flex-col md:flex-row gap-6">
+                <div class="d-flex flex-column d-md-flex-row gap-6">
                     <p-inputgroup>
                         <p-button label="Search" />
                         <input pInputText placeholder="Keyword" />

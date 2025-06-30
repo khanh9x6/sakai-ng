@@ -10,40 +10,40 @@ import { LayoutService } from '../../layout/service/layout.service';
     standalone: true,
     imports: [CommonModule, ChartModule, FluidModule],
     template: `
-        <p-fluid class="grid grid-cols-12 gap-8">
-            <div class="col-span-12 xl:col-span-6">
+        <p-fluid class="row row-cols-12 gap-4">
+            <div class="col-12 xl:col-span-6">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">Linear</div>
+                    <div class="fw-semibold fs-4 mb-3">Linear</div>
                     <p-chart type="line" [data]="lineData" [options]="lineOptions"></p-chart>
                 </div>
             </div>
-            <div class="col-span-12 xl:col-span-6">
+            <div class="col-12 xl:col-span-6">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">Bar</div>
+                    <div class="fw-semibold fs-4 mb-3">Bar</div>
                     <p-chart type="bar" [data]="barData" [options]="barOptions"></p-chart>
                 </div>
             </div>
-            <div class="col-span-12 xl:col-span-6">
-                <div class="card flex flex-col items-center">
-                    <div class="font-semibold text-xl mb-4">Pie</div>
+            <div class="col-12 xl:col-span-6">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="fw-semibold fs-4 mb-3">Pie</div>
                     <p-chart type="pie" [data]="pieData" [options]="pieOptions"></p-chart>
                 </div>
             </div>
-            <div class="col-span-12 xl:col-span-6">
-                <div class="card flex flex-col items-center">
-                    <div class="font-semibold text-xl mb-4">Doughnut</div>
+            <div class="col-12 xl:col-span-6">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="fw-semibold fs-4 mb-3">Doughnut</div>
                     <p-chart type="doughnut" [data]="pieData" [options]="pieOptions"></p-chart>
                 </div>
             </div>
-            <div class="col-span-12 xl:col-span-6">
-                <div class="card flex flex-col items-center">
-                    <div class="font-semibold text-xl mb-4">Polar Area</div>
+            <div class="col-12 xl:col-span-6">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="fw-semibold fs-4 mb-3">Polar Area</div>
                     <p-chart type="polarArea" [data]="polarData" [options]="polarOptions"></p-chart>
                 </div>
             </div>
-            <div class="col-span-12 xl:col-span-6">
-                <div class="card flex flex-col items-center">
-                    <div class="font-semibold text-xl mb-4">Radar</div>
+            <div class="col-12 xl:col-span-6">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="fw-semibold fs-4 mb-3">Radar</div>
                     <p-chart type="radar" [data]="radarData" [options]="radarOptions"></p-chart>
                 </div>
             </div>
@@ -124,7 +124,7 @@ export class ChartDemo {
                             weight: 500
                         }
                     },
-                    grid: {
+                    row: {
                         display: false,
                         drawBorder: false
                     }
@@ -133,7 +133,7 @@ export class ChartDemo {
                     ticks: {
                         color: textColorSecondary
                     },
-                    grid: {
+                    row: {
                         color: surfaceBorder,
                         drawBorder: false
                     }
@@ -200,7 +200,7 @@ export class ChartDemo {
                     ticks: {
                         color: textColorSecondary
                     },
-                    grid: {
+                    row: {
                         color: surfaceBorder,
                         drawBorder: false
                     }
@@ -209,7 +209,7 @@ export class ChartDemo {
                     ticks: {
                         color: textColorSecondary
                     },
-                    grid: {
+                    row: {
                         color: surfaceBorder,
                         drawBorder: false
                     }
@@ -238,7 +238,7 @@ export class ChartDemo {
             },
             scales: {
                 r: {
-                    grid: {
+                    row: {
                         color: surfaceBorder,
                     },
                     ticks: {
@@ -286,7 +286,7 @@ export class ChartDemo {
                     pointLabels: {
                         color: textColor
                     },
-                    grid: {
+                    row: {
                         color: surfaceBorder
                     }
                 }

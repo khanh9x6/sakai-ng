@@ -16,12 +16,12 @@ import { Product, ProductService } from '../service/product.service';
     selector: 'app-overlay-demo',
     standalone: true,
     imports: [ToastModule, DialogModule, ButtonModule, DrawerModule, PopoverModule, ConfirmPopupModule, InputTextModule, FormsModule, TooltipModule, TableModule, ToastModule],
-    template: ` <div class="flex flex-col md:flex-row gap-8">
+    template: ` <div class="d-flex flex-column d-md-flex-row gap-4">
         <div class="md:w-1/2">
             <div class="card">
-                <div class="font-semibold text-xl mb-4">Dialog</div>
+                <div class="fw-semibold fs-4 mb-3">Dialog</div>
                 <p-dialog header="Dialog" [(visible)]="display" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '30vw' }" [modal]="true">
-                    <p class="leading-normal m-0">
+                    <p class="lh-base m-0">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
@@ -33,8 +33,8 @@ import { Product, ProductService } from '../service/product.service';
             </div>
 
             <div class="card">
-                <div class="font-semibold text-xl mb-4">Popover</div>
-                <div class="flex flex-wrap gap-2">
+                <div class="fw-semibold fs-4 mb-3">Popover</div>
+                <div class="d-flex flex-wrap gap-2">
                     <p-button type="button" label="Show" (click)="toggleDataTable(op2, $event)" />
                     <p-popover #op2 id="overlay_panel" [style]="{ width: '450px' }">
                         <p-table [value]="products" selectionMode="single" [(selection)]="selectedProduct" dataKey="id" [rows]="5" [paginator]="true" (onRowSelect)="onProductSelect(op2, $event)">
@@ -48,7 +48,7 @@ import { Product, ProductService } from '../service/product.service';
                             <ng-template #body let-product>
                                 <tr [pSelectableRow]="product">
                                     <td>{{ product.name }}</td>
-                                    <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" class="w-16 shadow-sm" /></td>
+                                    <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" class="w-16 shadowsm" /></td>
                                     <td>{{ product.price }}</td>
                                 </tr>
                             </ng-template>
@@ -59,8 +59,8 @@ import { Product, ProductService } from '../service/product.service';
             </div>
 
             <div class="card">
-                <div class="font-semibold text-xl mb-4">Tooltip</div>
-                <div class="inline-flex gap-4">
+                <div class="fw-semibold fs-4 mb-3">Tooltip</div>
+                <div class="d-inline-d-flex g-3">
                     <input pInputText type="text" placeholder="Username" pTooltip="Your username" />
                     <p-button type="button" label="Save" pTooltip="Click to proceed" />
                 </div>
@@ -68,7 +68,7 @@ import { Product, ProductService } from '../service/product.service';
         </div>
         <div class="md:w-1/2">
             <div class="card">
-                <div class="font-semibold text-xl mb-4">Drawer</div>
+                <div class="fw-semibold fs-4 mb-3">Drawer</div>
                 <p-drawer [(visible)]="visibleLeft" header="Drawer">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -112,16 +112,16 @@ import { Product, ProductService } from '../service/product.service';
             </div>
 
             <div class="card">
-                <div class="font-semibold text-xl mb-4">ConfirmPopup</div>
+                <div class="fw-semibold fs-4 mb-3">ConfirmPopup</div>
                 <p-confirmpopup></p-confirmpopup>
-                <p-button #popup (click)="confirm($event)" icon="pi pi-check" label="Confirm" class="mr-2"></p-button>
+                <p-button #popup (click)="confirm($event)" icon="pi pi-check" label="Confirm" class="me-2"></p-button>
             </div>
 
             <div class="card">
-                <div class="font-semibold text-xl mb-4">ConfirmDialog</div>
+                <div class="fw-semibold fs-4 mb-3">ConfirmDialog</div>
                 <p-button label="Delete" icon="pi pi-trash" severity="danger" [style]="{ width: 'auto' }" (click)="openConfirmation()" />
                 <p-dialog header="Confirmation" [(visible)]="displayConfirmation" [style]="{ width: '350px' }" [modal]="true">
-                    <div class="flex items-center justify-center">
+                    <div class="d-flex align-items-center justify-content-center">
                         <i class="pi pi-exclamation-triangle mr-4" style="font-size: 2rem"> </i>
                         <span>Are you sure you want to proceed?</span>
                     </div>

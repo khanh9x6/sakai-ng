@@ -39,7 +39,7 @@ import { InputIcon, InputIconModule } from 'primeng/inputicon';
     ],
     template: `
         <div class="card">
-            <div class="font-semibold text-xl mb-4">Menubar</div>
+            <div class="fw-semibold fs-4 mb-3">Menubar</div>
             <p-menubar [model]="nestedMenuItems">
                 <ng-template #end>
                     <p-iconfield>
@@ -51,14 +51,14 @@ import { InputIcon, InputIconModule } from 'primeng/inputicon';
         </div>
 
         <div class="card">
-            <div class="font-semibold text-xl mb-4">Breadcrumb</div>
+            <div class="fw-semibold fs-4 mb-3">Breadcrumb</div>
             <p-breadcrumb [model]="breadcrumbItems" [home]="breadcrumbHome"></p-breadcrumb>
         </div>
 
-        <div class="flex flex-col md:flex-row gap-8">
+        <div class="d-flex flex-column d-md-flex-row gap-4">
             <div class="md:w-1/2">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">Steps</div>
+                    <div class="fw-semibold fs-4 mb-3">Steps</div>
                     <p-stepper [value]="1">
                         <p-step-list>
                             <p-step [value]="1">Header I</p-step>
@@ -70,7 +70,7 @@ import { InputIcon, InputIconModule } from 'primeng/inputicon';
             </div>
             <div class="md:w-1/2">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">TabMenu</div>
+                    <div class="fw-semibold fs-4 mb-3">TabMenu</div>
                     <p-tabs [value]="0">
                         <p-tablist>
                             <p-tab [value]="0">Header I</p-tab>
@@ -82,47 +82,47 @@ import { InputIcon, InputIconModule } from 'primeng/inputicon';
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row gap-8 mt-6">
+        <div class="d-flex flex-column d-md-flex-row gap-4 mt-4">
             <div class="md:w-1/3">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">Tiered Menu</div>
+                    <div class="fw-semibold fs-4 mb-3">Tiered Menu</div>
                     <p-tieredmenu [model]="tieredMenuItems"></p-tieredmenu>
                 </div>
             </div>
             <div class="md:w-1/3">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">Plain Menu</div>
+                    <div class="fw-semibold fs-4 mb-3">Plain Menu</div>
                     <p-menu [model]="menuItems"></p-menu>
                 </div>
             </div>
             <div class="md:w-1/3">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">Overlay Menu</div>
+                    <div class="fw-semibold fs-4 mb-3">Overlay Menu</div>
                     <p-menu #menu [popup]="true" [model]="overlayMenuItems"></p-menu>
                     <button type="button" pButton icon="pi pi-chevron-down" label="Options" (click)="menu.toggle($event)" style="width:auto"></button>
                 </div>
 
                 <div class="card" #anchor>
-                    <div class="font-semibold text-xl mb-4">Context Menu</div>
+                    <div class="fw-semibold fs-4 mb-3">Context Menu</div>
                     Right click to display.
                     <p-contextmenu [target]="anchor" [model]="contextMenuItems"></p-contextmenu>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row gap-8 mt-8">
+        <div class="d-flex flex-column d-md-flex-row gap-4 mt-5">
             <div class="md:w-1/2">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">MegaMenu | Horizontal</div>
+                    <div class="fw-semibold fs-4 mb-3">MegaMenu | Horizontal</div>
                     <p-megamenu [model]="megaMenuItems" />
 
-                    <div class="font-semibold text-xl mb-4 mt-8">MegaMenu | Vertical</div>
+                    <div class="fw-semibold fs-4 mb-3 mt-5">MegaMenu | Vertical</div>
                     <p-megamenu [model]="megaMenuItems" orientation="vertical" />
                 </div>
             </div>
             <div class="md:w-1/2">
                 <div class="card">
-                    <div class="font-semibold text-xl mb-4">PanelMenu</div>
+                    <div class="fw-semibold fs-4 mb-3">PanelMenu</div>
                     <p-panelmenu [model]="panelMenuItems" />
                 </div>
             </div>

@@ -17,8 +17,8 @@ import { FooterWidget } from './components/footerwidget';
     imports: [RouterModule, TopbarWidget, HeroWidget, FeaturesWidget, HighlightsWidget, PricingWidget, FooterWidget, RippleModule, StyleClassModule, ButtonModule, DividerModule],
     template: `
         <div class="bg-light">
-            <div id="home" class="landing-wrapper overflow-hidden">
-                <topbar-widget class="py-4 px-3 mx-0 mx-md-4 mx-lg-5 px-lg-5 d-flex align-items-center justify-content-between position-relative position-lg-static" />
+            <div id="home" class="landing-wrapper overflow-d-none">
+                <topbar-widget class="py-3 px-3 mx-0 mx-md-4 mx-lg-5 px-lg-5 d-d-flex align-align-items-center justify-content-between position-position-relative position-lg-position-static" />
                 <hero-widget />
                 <features-widget />
                 <highlights-widget />

@@ -7,7 +7,7 @@ import { ButtonModule } from 'primeng/button';
 @Component({
     selector: 'topbar-widget',
     imports: [RouterModule, StyleClassModule, ButtonModule, RippleModule],
-    template: `<a class="d-flex align-items-center" href="#">
+    template: `<a class="d-d-flex align-align-items-center" href="#">
             <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 me-2" style="height: 3rem;">
                 <path
                     fill-rule="evenodd"
@@ -28,12 +28,12 @@ import { ButtonModule } from 'primeng/button';
             <span class="text-dark fw-medium fs-4 lh-base me-5">SAKAI</span>
         </a>
 
-        <a pButton [text]="true" severity="secondary" [rounded]="true" pRipple class="d-lg-none" pStyleClass="@next" enterClass="visually-hidden" leaveToClass="visually-hidden" [hideOnOutsideClick]="true">
+        <a pButton [text]="true" severity="secondary" [rounded]="true" pRipple class="d-lg-none" pStyleClass="@next" enterClass="visually-d-none" leaveToClass="visually-d-none" [hideOnOutsideClick]="true">
             <i class="pi pi-bars fs-4"></i>
         </a>
 
-        <div class="align-items-center bg-light flex-grow-1 justify-content-between d-none d-lg-flex position-absolute position-lg-static w-100 start-0 top-100 px-4 px-lg-0 z-3 rounded">
-            <ul class="list-unstyled p-0 m-0 d-flex d-lg-flex align-items-lg-center user-select-none flex-column flex-lg-row" style="cursor: pointer; gap: 2rem;">
+        <div class="align-align-items-center bg-light d-flex-flex-grow-1-1 justify-content-between d-none d-lg-d-flex position-position-absolute position-lg-position-static w-100 start-0 top-100 px-3 px-lg-0 z-3 rounded">
+            <ul class="list-unstyled p-0 m-0 d-d-flex d-lg-d-flex align-items-lg-center user-user-select-none flex-column d-flex-lg-row" style="cursor: pointer; gap: 2rem;">
                 <li>
                     <a (click)="router.navigate(['/landing'], { fragment: 'home' })" pRipple class="px-0 py-3 text-dark fw-medium fs-5">
                         <span>Home</span>
@@ -55,7 +55,7 @@ import { ButtonModule } from 'primeng/button';
                     </a>
                 </li>
             </ul>
-            <div class="d-flex border-top border-lg-0 border-secondary py-3 py-lg-0 mt-3 mt-lg-0 gap-2">
+            <div class="d-d-flex border-top border-lg-0 border-secondary py-3 py-lg-0 mt-3 mt-lg-0 gap-2">
                 <button pButton pRipple label="Login" routerLink="/auth/login" [rounded]="true" [text]="true"></button>
                 <button pButton pRipple label="Register" routerLink="/auth/login" [rounded]="true"></button>
             </div>
