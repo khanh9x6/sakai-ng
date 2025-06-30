@@ -16,9 +16,9 @@ import { FooterWidget } from './components/footerwidget';
     standalone: true,
     imports: [RouterModule, TopbarWidget, HeroWidget, FeaturesWidget, HighlightsWidget, PricingWidget, FooterWidget, RippleModule, StyleClassModule, ButtonModule, DividerModule],
     template: `
-        <div class="bg-surface-0 dark:bg-surface-900">
+        <div class="bg-light">
             <div id="home" class="landing-wrapper overflow-hidden">
-                <topbar-widget class="py-6 px-6 mx-0 md:mx-12 lg:mx-20 lg:px-20 flex items-center justify-between relative lg:static" />
+                <topbar-widget class="py-4 px-3 mx-0 mx-md-4 mx-lg-5 px-lg-5 d-flex align-items-center justify-content-between position-relative position-lg-static" />
                 <hero-widget />
                 <features-widget />
                 <highlights-widget />

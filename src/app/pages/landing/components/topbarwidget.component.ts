@@ -7,8 +7,8 @@ import { ButtonModule } from 'primeng/button';
 @Component({
     selector: 'topbar-widget',
     imports: [RouterModule, StyleClassModule, ButtonModule, RippleModule],
-    template: `<a class="flex items-center" href="#">
-            <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 mr-2">
+    template: `<a class="d-flex align-items-center" href="#">
+            <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 me-2" style="height: 3rem;">
                 <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -25,37 +25,37 @@ import { ButtonModule } from 'primeng/button';
                     />
                 </g>
             </svg>
-            <span class="text-surface-900 dark:text-surface-0 font-medium text-2xl leading-normal mr-20">SAKAI</span>
+            <span class="text-dark fw-medium fs-4 lh-base me-5">SAKAI</span>
         </a>
 
-        <a pButton [text]="true" severity="secondary" [rounded]="true" pRipple class="lg:!hidden" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
-            <i class="pi pi-bars !text-2xl"></i>
+        <a pButton [text]="true" severity="secondary" [rounded]="true" pRipple class="d-lg-none" pStyleClass="@next" enterClass="visually-hidden" leaveToClass="visually-hidden" [hideOnOutsideClick]="true">
+            <i class="pi pi-bars fs-4"></i>
         </a>
 
-        <div class="items-center bg-surface-0 dark:bg-surface-900 grow justify-between hidden lg:flex absolute lg:static w-full left-0 top-full px-12 lg:px-0 z-20 rounded-border">
-            <ul class="list-none p-0 m-0 flex lg:items-center select-none flex-col lg:flex-row cursor-pointer gap-8">
+        <div class="align-items-center bg-light flex-grow-1 justify-content-between d-none d-lg-flex position-absolute position-lg-static w-100 start-0 top-100 px-4 px-lg-0 z-3 rounded">
+            <ul class="list-unstyled p-0 m-0 d-flex d-lg-flex align-items-lg-center user-select-none flex-column flex-lg-row" style="cursor: pointer; gap: 2rem;">
                 <li>
-                    <a (click)="router.navigate(['/landing'], { fragment: 'home' })" pRipple class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
+                    <a (click)="router.navigate(['/landing'], { fragment: 'home' })" pRipple class="px-0 py-3 text-dark fw-medium fs-5">
                         <span>Home</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate(['/landing'], { fragment: 'features' })" pRipple class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
+                    <a (click)="router.navigate(['/landing'], { fragment: 'features' })" pRipple class="px-0 py-3 text-dark fw-medium fs-5">
                         <span>Features</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate(['/landing'], { fragment: 'highlights' })" pRipple class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
+                    <a (click)="router.navigate(['/landing'], { fragment: 'highlights' })" pRipple class="px-0 py-3 text-dark fw-medium fs-5">
                         <span>Highlights</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate(['/landing'], { fragment: 'pricing' })" pRipple class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
+                    <a (click)="router.navigate(['/landing'], { fragment: 'pricing' })" pRipple class="px-0 py-3 text-dark fw-medium fs-5">
                         <span>Pricing</span>
                     </a>
                 </li>
             </ul>
-            <div class="flex border-t lg:border-t-0 border-surface py-4 lg:py-0 mt-4 lg:mt-0 gap-2">
+            <div class="d-flex border-top border-lg-0 border-secondary py-3 py-lg-0 mt-3 mt-lg-0 gap-2">
                 <button pButton pRipple label="Login" routerLink="/auth/login" [rounded]="true" [text]="true"></button>
                 <button pButton pRipple label="Register" routerLink="/auth/login" [rounded]="true"></button>
             </div>
