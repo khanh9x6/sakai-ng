@@ -13,24 +13,24 @@ import { Product, ProductService } from '../service/product.service';
     standalone: true,
     imports: [CommonModule, CarouselModule, ButtonModule, GalleriaModule, ImageModule, TagModule],
     template: `<div class="card">
-            <div class="font-semibold text-xl mb-4">Carousel</div>
+            <div class="fw-semibold fs-4 mb-3">Carousel</div>
             <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="carouselResponsiveOptions">
                 <ng-template let-product #item>
-                    <div class="border border-surface rounded-border m-2 p-4">
-                        <div class="mb-4">
-                            <div class="relative mx-auto">
-                                <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />
-                                <div class="absolute bg-black/70 rounded-border" [ngStyle]="{ 'left.px': 5, 'top.px': 5 }">
+                    <div class="border border-secondary rounded m-2 p-3">
+                        <div class="mb-3">
+                            <div class="position-relative mx-auto">
+                                <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-100 rounded" />
+                                <div class="position-absolute bg-black/70 rounded" [ngStyle]="{ 'left.px': 5, 'top.px': 5 }">
                                     <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)" />
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-4 font-medium">{{ product.name }}</div>
-                        <div class="flex justify-between items-center">
-                            <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>
+                        <div class="mb-3 fw-medium">{{ product.name }}</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mt-0 fw-semibold fs-4">{{ '$' + product.price }}</div>
                             <span>
                                 <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
-                                <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
+                                <p-button icon="pi pi-shopping-cart" styleClass="ms-2" />
                             </span>
                         </div>
                     </div>
@@ -39,12 +39,12 @@ import { Product, ProductService } from '../service/product.service';
         </div>
 
         <div class="card">
-            <div class="font-semibold text-xl mb-4">Image</div>
+            <div class="fw-semibold fs-4 mb-3">Image</div>
             <p-image src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg" alt="Image" width="250" />
         </div>
 
         <div class="card">
-            <div class="font-semibold text-xl mb-4">Galleria</div>
+            <div class="fw-semibold fs-4 mb-3">Galleria</div>
             <p-galleria [value]="images" [responsiveOptions]="galleriaResponsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
                 <ng-template #item let-item>
                     <img [src]="item.itemImageSrc" style="width:100%" />

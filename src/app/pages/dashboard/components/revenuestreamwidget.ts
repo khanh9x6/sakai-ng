@@ -7,8 +7,8 @@ import { LayoutService } from '../../../layout/service/layout.service';
     standalone: true,
     selector: 'app-revenue-stream-widget',
     imports: [ChartModule],
-    template: `<div class="card !mb-8">
-        <div class="font-semibold text-xl mb-4">Revenue Stream</div>
+    template: `<div class="card !mb-5">
+        <div class="fw-semibold fs-4 mb-3">Revenue Stream</div>
         <p-chart type="bar" [data]="chartData" [options]="chartOptions" class="h-80" />
     </div>`
 })
@@ -85,7 +85,7 @@ export class RevenueStreamWidget {
                     ticks: {
                         color: textMutedColor
                     },
-                    grid: {
+                    row: {
                         color: 'transparent',
                         borderColor: 'transparent'
                     }
@@ -95,7 +95,7 @@ export class RevenueStreamWidget {
                     ticks: {
                         color: textMutedColor
                     },
-                    grid: {
+                    row: {
                         color: borderColor,
                         borderColor: 'transparent',
                         drawTicks: false

@@ -42,13 +42,13 @@ import { LayoutService } from '../service/layout.service';
                 <button type="button" class="layout-topbar-action" (click)="toggleDarkMode()">
                     <i [ngClass]="{ 'pi ': true, 'pi-moon': layoutService.isDarkTheme(), 'pi-sun': !layoutService.isDarkTheme() }"></i>
                 </button>
-                <div class="relative">
+                <div class="position-relative">
                     <button
                         class="layout-topbar-action layout-topbar-action-highlight"
                         pStyleClass="@next"
-                        enterFromClass="hidden"
+                        enterFromClass="d-none"
                         enterActiveClass="animate-scalein"
-                        leaveToClass="hidden"
+                        leaveToClass="d-none"
                         leaveActiveClass="animate-fadeout"
                         [hideOnOutsideClick]="true"
                     >
@@ -58,11 +58,11 @@ import { LayoutService } from '../service/layout.service';
                 </div>
             </div>
 
-            <button class="layout-topbar-menu-button layout-topbar-action" pStyleClass="@next" enterFromClass="hidden" enterActiveClass="animate-scalein" leaveToClass="hidden" leaveActiveClass="animate-fadeout" [hideOnOutsideClick]="true">
+            <button class="layout-topbar-menu-button layout-topbar-action" pStyleClass="@next" enterFromClass="d-none" enterActiveClass="animate-scalein" leaveToClass="d-none" leaveActiveClass="animate-fadeout" [hideOnOutsideClick]="true">
                 <i class="pi pi-ellipsis-v"></i>
             </button>
 
-            <div class="layout-topbar-menu hidden lg:block">
+            <div class="layout-topbar-menu d-none d-lg-d-block">
                 <div class="layout-topbar-menu-content">
                     <button type="button" class="layout-topbar-action">
                         <i class="pi pi-calendar"></i>

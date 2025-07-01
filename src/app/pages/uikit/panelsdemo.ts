@@ -39,13 +39,13 @@ import { ToolbarModule } from 'primeng/toolbar';
         InputIconModule
     ],
     template: `
-        <div class="flex flex-col">
+        <div class="d-flex flex-column">
             <div class="card">
-                <div class="font-semibold text-xl mb-4">Toolbar</div>
+                <div class="fw-semibold fs-4 mb-3">Toolbar</div>
                 <p-toolbar>
                     <ng-template #start>
-                        <p-button icon="pi pi-plus" class="mr-2" severity="secondary" text />
-                        <p-button icon="pi pi-print" class="mr-2" severity="secondary" text />
+                        <p-button icon="pi pi-plus" class="me-2" severity="secondary" text />
+                        <p-button icon="pi pi-print" class="me-2" severity="secondary" text />
                         <p-button icon="pi pi-upload" severity="secondary" text />
                     </ng-template>
 
@@ -62,10 +62,10 @@ import { ToolbarModule } from 'primeng/toolbar';
                 </p-toolbar>
             </div>
 
-            <div class="flex flex-col md:flex-row gap-8">
+            <div class="d-flex flex-column d-md-flex-row gap-4">
                 <div class="md:w-1/2">
                     <div class="card">
-                        <div class="font-semibold text-xl mb-4">Accordion</div>
+                        <div class="fw-semibold fs-4 mb-3">Accordion</div>
                         <p-accordion value="0">
                             <p-accordion-panel value="0">
                                 <p-accordion-header>Header I</p-accordion-header>
@@ -102,7 +102,7 @@ import { ToolbarModule } from 'primeng/toolbar';
                         </p-accordion>
                     </div>
                     <div class="card">
-                        <div class="font-semibold text-xl mb-4">Tabs</div>
+                        <div class="fw-semibold fs-4 mb-3">Tabs</div>
                         <p-tabs value="0">
                             <p-tablist>
                                 <p-tab value="0">Header I</p-tab>
@@ -135,9 +135,9 @@ import { ToolbarModule } from 'primeng/toolbar';
                         </p-tabs>
                     </div>
                 </div>
-                <div class="md:w-1/2 mt-6 md:mt-0">
+                <div class="md:w-1/2 mt-4 md:mt-0">
                     <div class="card">
-                        <div class="font-semibold text-xl mb-4">Panel</div>
+                        <div class="fw-semibold fs-4 mb-3">Panel</div>
                         <p-panel header="Header" [toggleable]="true">
                             <p class="m-0">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -147,7 +147,7 @@ import { ToolbarModule } from 'primeng/toolbar';
                         </p-panel>
                     </div>
                     <div class="card">
-                        <div class="font-semibold text-xl mb-4">Fieldset</div>
+                        <div class="fw-semibold fs-4 mb-3">Fieldset</div>
                         <p-fieldset legend="Legend" [toggleable]="true">
                             <p class="m-0">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -159,50 +159,50 @@ import { ToolbarModule } from 'primeng/toolbar';
                 </div>
             </div>
 
-            <div class="card mt-8">
-                <div class="font-semibold text-xl mb-4">Divider</div>
-                <div class="flex flex-col md:flex-row">
-                    <div class="w-full md:w-5/12 flex flex-col items-center justify-center gap-3 py-5">
-                        <div class="flex flex-col gap-2">
+            <div class="card mt-5">
+                <div class="fw-semibold fs-4 mb-3">Divider</div>
+                <div class="d-flex flex-column d-md-flex-row">
+                    <div class="w-100 md:w-5/12 d-flex flex-column align-items-center justify-content-center gap-3 py-5">
+                        <div class="d-flex flex-column gap-2">
                             <label for="username">Username</label>
                             <input pInputText id="username" type="text" />
                         </div>
-                        <div class="flex flex-col gap-2">
+                        <div class="d-flex flex-column gap-2">
                             <label for="password">Password</label>
                             <input pInputText id="password" type="password" />
                         </div>
-                        <div class="flex">
-                            <p-button label="Login" icon="pi pi-user" class="w-full max-w-[17.35rem] mx-auto"></p-button>
+                        <div class="d-flex">
+                            <p-button label="Login" icon="pi pi-user" class="w-100 max-w-[17.35rem] mx-auto"></p-button>
                         </div>
                     </div>
-                    <div class="w-full md:w-2/12">
-                        <p-divider layout="vertical" class="!hidden md:!flex"><b>OR</b></p-divider>
-                        <p-divider layout="horizontal" class="!flex md:!hidden" align="center"><b>OR</b></p-divider>
+                    <div class="w-100 md:w-2/12">
+                        <p-divider layout="vertical" class="!d-none md:!d-flex"><b>OR</b></p-divider>
+                        <p-divider layout="horizontal" class="!d-flex md:!d-none" align="center"><b>OR</b></p-divider>
                     </div>
-                    <div class="w-full md:w-5/12 flex items-center justify-center py-5">
-                        <p-button label="Sign Up" icon="pi pi-user-plus" severity="success" class="w-full" styleClass="w-full max-w-[17.35rem] mx-auto"></p-button>
+                    <div class="w-100 md:w-5/12 d-flex align-items-center justify-content-center py-5">
+                        <p-button label="Sign Up" icon="pi pi-user-plus" severity="success" class="w-100" styleClass="w-100 max-w-[17.35rem] mx-auto"></p-button>
                     </div>
                 </div>
             </div>
 
             <div class="card">
-                <div class="font-semibold text-xl mb-4">Splitter</div>
-                <p-splitter [style]="{ height: '300px' }" [panelSizes]="[20, 80]" [minSizes]="[10, 0]" styleClass="mb-8">
+                <div class="fw-semibold fs-4 mb-3">Splitter</div>
+                <p-splitter [style]="{ height: '300px' }" [panelSizes]="[20, 80]" [minSizes]="[10, 0]" styleClass="mb-5">
                     <ng-template #panel>
-                        <div class="col flex items-center justify-center">Panel 1</div>
+                        <div class="col d-flex align-items-center justify-content-center">Panel 1</div>
                     </ng-template>
                     <ng-template #panel>
                         <p-splitter layout="vertical" [panelSizes]="[50, 50]">
                             <ng-template #panel>
-                                <div style="flex-grow: 1;" class="flex items-center justify-center">Panel 2</div>
+                                <div style="d-flex-flex-grow-1: 1;" class="d-flex align-items-center justify-content-center">Panel 2</div>
                             </ng-template>
                             <ng-template #panel>
                                 <p-splitter [panelSizes]="[20, 80]">
                                     <ng-template #panel>
-                                        <div class="col flex items-center justify-center">Panel 3</div>
+                                        <div class="col d-flex align-items-center justify-content-center">Panel 3</div>
                                     </ng-template>
                                     <ng-template #panel>
-                                        <div class="col flex items-center justify-center">Panel 4</div>
+                                        <div class="col d-flex align-items-center justify-content-center">Panel 4</div>
                                     </ng-template>
                                 </p-splitter>
                             </ng-template>
